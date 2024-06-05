@@ -1,22 +1,23 @@
-# goit-rdb-hw-02 Relationship Databases Topic II
+# goit-rdb-hw-05 Relationship Databases Topic V Nested requests. Code reuse
 
-1. Переведіть початкову таблицю в першу нормальну форму, розробіть ER-діаграму отриманих таблиць.
+1. -- SQL query that displays the `order_details` table and the `customer_id` field from the `orders` table, respectively, for each record field from the `order_details` table
 
-![1NF_screenshot](./assets/1NF_screenshot.png)
+![screenshot](./assets)
 
-2. Переведіть нові таблиці в другу нормальну форму, розробіть ER-діаграму отриманих таблиць.
+2. -- SQL query that displays the `order_details` table. The results are filtered so that the corresponding record from the `orders` table fulfils the condition `shipper_id=3`. A nested query in the `WHERE` clause used
 
-![2NF_screenshot](./assets/2NF_screenshot.png)
+![screenshot](./assets)
 
-3. Переведіть нові таблиці в третю нормальну форму, розробіть ER-діаграму отриманих таблиць.
+3. -- SQL query nested in the `FROM' statement, which selects rows with the `quantity>10' condition from the `order_details` table. For the received data, the AVG value of the `quantity' field is taken — grouped by `order_id`
 
-![3NF_screenshot](./assets/3NF_screenshot.png)
+![screenshot](./assets)
 
-💡 Результат нормалізації таблиць може бути в довільній формі/форматі (Google Doc, Google таблиці тощо). 5. Створено ER-діаграму отриманих таблиць. Діаграма має відповідати нормалізованим таблицям.
+4. -- Task 3 new solution using the `WITH` statement to create the temporary table `temp`
 
-![Google Sheets](./assets/NF_screenshot_Google_Sheets.png)
+![screenshot](./assets)
 
-💡 Має бути декілька таблиць зі зв’язком між ними. Результат може бути у вигляді файлу та/або скриншота. 6. Використано зрозумілі та конкретні імена для сутностей та атрибутів. Уточнено типи даних для атрибутів. Усі відношення й атрибути мають чіткі і зрозумілі кардинальності та значення. 7. Створено таблиці в базі даних (тільки таблиці й колонки з урахуванням зв'язків) вручну або автоматично.
-💡 Результат має бути у вигляді скриншота розгорнутої схеми у Workbench.
+5. -- This function has two parameters that divide the first parameter by the second. Both the parameters and the return value are of `FLOAT` type. The `DROP FUNCTION IF EXISTS` construct applied to the `quantity` attribute of the `order_details` table
 
-![NF_screenshot_schemas_p1-4](./assets/NF_screenshot_schemas_p1-4.png)
+![screenshot](./assets)
+
+[text](sql_code.txt)
